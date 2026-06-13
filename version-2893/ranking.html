@@ -1,0 +1,1611 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>影视热播排行榜-影视在线</title>
+    <meta name="description" content="影视在线热播排行榜，推荐近期热门高清电影、电视剧、动画、综艺和多类型影视作品。">
+    <meta name="keywords" content="影视在线,高清电影,电视剧在线观看,免费影视,在线播放,剧情片,爱情片,动作片,综艺节目,视频播放,影视资源,电影网站,高清视频,影视排行榜,电影排行榜,热播剧集">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/site.js" defer></script>
+</head>
+<body>
+
+<header class="site-header" data-site-header>
+    <div class="header-inner">
+        <a class="site-logo" href="./index.html" aria-label="影视在线首页">
+            <span class="logo-mark">影</span>
+            <span class="logo-text">影视在线</span>
+        </a>
+        <nav class="main-nav" aria-label="主导航">
+            <a class="nav-link" href="./index.html">首页</a>
+            <a class="nav-link" href="./categories.html">分类</a>
+            <a class="nav-link is-active" href="./ranking.html">排行榜</a>
+            <a class="nav-link" href="./search.html">搜索</a>
+            <div class="nav-dropdown">
+                <button class="nav-link nav-drop-button" type="button">频道</button>
+                <div class="dropdown-panel">
+                    <a href="./category-movie.html">高清电影</a>
+                    <a href="./category-series.html">热播剧集</a>
+                    <a href="./category-action.html">动作冒险</a>
+                    <a href="./category-romance.html">爱情剧情</a>
+                    <a href="./category-comedy.html">喜剧欢乐</a>
+                    <a href="./category-suspense.html">悬疑犯罪</a>
+                    <a href="./category-animation.html">动画动漫</a>
+                    <a href="./category-fantasy.html">科幻奇幻</a>
+                    <a href="./category-history.html">历史古装</a>
+                    <a href="./category-variety.html">综艺纪实</a>
+                    <a href="./category-asia.html">亚洲精选</a>
+                    <a href="./category-global.html">欧美环球</a>
+                </div>
+            </div>
+        </nav>
+        <button class="mobile-nav-toggle" type="button" aria-label="打开导航" data-mobile-toggle>
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+    <nav class="mobile-nav" aria-label="移动导航" data-mobile-menu>
+        <a href="./index.html">首页</a>
+        <a href="./categories.html">分类</a>
+        <a href="./ranking.html">排行榜</a>
+        <a href="./search.html">搜索</a>
+        <div class="mobile-category-links">
+                <a href="./category-movie.html">高清电影</a>
+                <a href="./category-series.html">热播剧集</a>
+                <a href="./category-action.html">动作冒险</a>
+                <a href="./category-romance.html">爱情剧情</a>
+                <a href="./category-comedy.html">喜剧欢乐</a>
+                <a href="./category-suspense.html">悬疑犯罪</a>
+                <a href="./category-animation.html">动画动漫</a>
+                <a href="./category-fantasy.html">科幻奇幻</a>
+                <a href="./category-history.html">历史古装</a>
+                <a href="./category-variety.html">综艺纪实</a>
+                <a href="./category-asia.html">亚洲精选</a>
+                <a href="./category-global.html">欧美环球</a>
+        </div>
+    </nav>
+</header>
+
+<main class="page-main">
+    <section class="page-hero ranking-hero">
+        <div class="container">
+            <span class="eyebrow">Ranking</span>
+            <h1>影视热播排行榜</h1>
+            <p>综合年份、题材丰富度与内容推荐强度整理热播影片，快速发现值得观看的电影与剧集。</p>
+        </div>
+    </section>
+    <section class="content-section">
+
+        <section class="filter-shell" data-filter-root>
+            <div class="filter-toolbar">
+                <label class="filter-search">
+                    <span>搜索</span>
+                    <input type="search" data-search-input name="q" placeholder="搜索榜单影片、分类、标签或地区" autocomplete="off">
+                </label>
+                <label>
+                    <span>分类</span>
+                    <select data-category-filter>
+                        <option value="all">全部分类</option>
+                    <option value="movie">高清电影</option>
+                    <option value="series">热播剧集</option>
+                    <option value="action">动作冒险</option>
+                    <option value="romance">爱情剧情</option>
+                    <option value="comedy">喜剧欢乐</option>
+                    <option value="suspense">悬疑犯罪</option>
+                    <option value="animation">动画动漫</option>
+                    <option value="fantasy">科幻奇幻</option>
+                    <option value="history">历史古装</option>
+                    <option value="variety">综艺纪实</option>
+                    <option value="asia">亚洲精选</option>
+                    <option value="global">欧美环球</option>
+                    </select>
+                </label>
+                <label>
+                    <span>类型</span>
+                    <select data-type-filter>
+                        <option value="all">全部类型</option>
+                        <option value="movie">电影</option>
+                        <option value="series">剧集</option>
+                        <option value="animation">动画</option>
+                        <option value="variety">综艺</option>
+                        <option value="documentary">纪录</option>
+                    </select>
+                </label>
+                <label>
+                    <span>年份</span>
+                    <select data-year-filter>
+                        <option value="all">全部年份</option>
+                        <option value="2020s">2020 后</option>
+                        <option value="2010s">2010 年代</option>
+                        <option value="2000s">2000 年代</option>
+                        <option value="older">更早作品</option>
+                    </select>
+                </label>
+            </div>
+            <div class="filter-empty" data-filter-empty>没有找到匹配内容</div>
+
+            <ol class="ranking-list-large" data-filter-grid>
+
+            <li class="ranking-row" data-movie-card data-title="星战启示录" data-search="星战启示录 美国 剧集 科幻,冒险,动作 星球大战 衍生剧 银河帝国 绝地 后传" data-category="fantasy" data-type-group="series" data-year-group="2020s" data-year="2026">
+                <a href="./movie-540.html">
+                    <span class="ranking-index">01</span>
+                    <img src="./90.jpg" alt="星战启示录" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>星战启示录</strong>
+                        <em>在《天行者崛起》百年后,一个拾荒者在废弃的死星残骸里,找到了最后一个原力敏感的婴孩。</em>
+                        <span>奇幻 · 美国 · 2026</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="天池水怪" data-search="天池水怪 中国大陆 电影 科幻/灾难/冒险 水怪 天池 科研队 基因突变" data-category="fantasy" data-type-group="movie" data-year-group="2020s" data-year="2027">
+                <a href="./movie-1531.html">
+                    <span class="ranking-index">02</span>
+                    <img src="./31.jpg" alt="天池水怪" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>天池水怪</strong>
+                        <em>长白山天池科考队发现湖底有热源信号,潜水器被巨物拖拽,浮出水面时舱体留着三道巨大爪痕。</em>
+                        <span>奇幻 · 中国大陆 · 2027</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="伊比萨" data-search="伊比萨 西班牙/美国 电影 爱情/喜剧/音乐 电音 艳遇 自我寻找 一夜情 女性视角" data-category="variety" data-type-group="series" data-year-group="2020s" data-year="2025">
+                <a href="./movie-755.html">
+                    <span class="ranking-index">03</span>
+                    <img src="./5.jpg" alt="伊比萨" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>伊比萨</strong>
+                        <em>三十岁的华尔街女强人在伊比萨岛的一夜艳遇后,发现对方竟是世界顶级DJ,而她怀孕了。</em>
+                        <span>综艺 · 西班牙/美国 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="卡斯特将军" data-search="卡斯特将军 美国 剧集 历史 西部 印第安战争 争议人物 多视角" data-category="action" data-type-group="series" data-year-group="2020s" data-year="2025">
+                <a href="./movie-852.html">
+                    <span class="ranking-index">04</span>
+                    <img src="./102.jpg" alt="卡斯特将军" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>卡斯特将军</strong>
+                        <em>从小巨角河战役幸存者口述中还原的卡斯特将军——他既不是英雄,也不是恶棍,而是一个偏执狂。</em>
+                        <span>动作 · 美国 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="一个幸存者的回忆" data-search="一个幸存者的回忆 德国 电影 剧情/战争/传记 二战 犹太幸存者 老年痴呆 记忆" data-category="action" data-type-group="series" data-year-group="2020s" data-year="2026">
+                <a href="./movie-1122.html">
+                    <span class="ranking-index">05</span>
+                    <img src="./72.jpg" alt="一个幸存者的回忆" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>一个幸存者的回忆</strong>
+                        <em>一位90岁的集中营幸存者开始失忆,但每次忘记一件事,就会想起另一段被埋藏的残酷真相。</em>
+                        <span>动作 · 德国 · 2026</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="朝雪录" data-search="朝雪录 中国大陆 剧集 古装悬疑、剧情 宫廷 推理 女性 复仇 权谋" data-category="romance" data-type-group="series" data-year-group="2020s" data-year="2025">
+                <a href="./movie-1725.html">
+                    <span class="ranking-index">06</span>
+                    <img src="./75.jpg" alt="朝雪录" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>朝雪录</strong>
+                        <em>亡国公主隐姓埋名入宫为婢,用一本记录宫廷秘辛的《朝雪录》向四大权贵家族展开复仇。</em>
+                        <span>爱情 · 中国大陆 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="热恋女校" data-search="热恋女校 泰国 剧集 爱情、青春、同性 百合 贵族女校 学生会 秘密 双向暗恋" data-category="asia" data-type-group="series" data-year-group="2020s" data-year="2026">
+                <a href="./movie-1232.html">
+                    <span class="ranking-index">07</span>
+                    <img src="./32.jpg" alt="热恋女校" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>热恋女校</strong>
+                        <em>贵族女校里,学生会主席和问题少女表面水火不容,其实每晚都在天台偷偷接吻。</em>
+                        <span>亚洲 · 泰国 · 2026</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="泣血四月" data-search="泣血四月 英国/爱尔兰 电影 剧情/战争/历史 爱尔兰内战 兄弟反目 情感伤痕 1920年代" data-category="action" data-type-group="series" data-year-group="2020s" data-year="2025">
+                <a href="./movie-1046.html">
+                    <span class="ranking-index">08</span>
+                    <img src="./146.jpg" alt="泣血四月" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>泣血四月</strong>
+                        <em>1922 年爱尔兰内战爆发,一对亲兄弟站到了战壕的两边,而他们的母亲只有四月的最后一天来决定救谁。</em>
+                        <span>动作 · 英国/爱尔兰 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="地海战记" data-search="地海战记 日本 动画电影 动画,奇幻,冒险 宫崎骏风格 龙 魔法 平衡" data-category="animation" data-type-group="animation" data-year-group="2020s" data-year="2027">
+                <a href="./movie-1759.html">
+                    <span class="ranking-index">09</span>
+                    <img src="./109.jpg" alt="地海战记" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>地海战记</strong>
+                        <em>当世界的地、海、风开始失衡,一个自称“无名的少年”和最后的龙族公主踏上修复世界的旅程。</em>
+                        <span>动画 · 日本 · 2027</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="逼上梁山" data-search="逼上梁山 中国大陆 电影 动作,犯罪,悬疑 现代武侠 下岗工人 以暴制暴 社会寓言" data-category="action" data-type-group="movie" data-year-group="2020s" data-year="2026">
+                <a href="./movie-1392.html">
+                    <span class="ranking-index">10</span>
+                    <img src="./42.jpg" alt="逼上梁山" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>逼上梁山</strong>
+                        <em>东北老工业区下岗的拳击冠军,为给白血病女儿筹钱,被逼重操旧业打黑拳,却发现地下拳场背后是当年买断工龄的那个老板。</em>
+                        <span>动作 · 中国大陆 · 2026</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="沉睡百万年" data-search="沉睡百万年 美国 电影 科幻悬疑 星际旅行 冬眠 社会学实验 文明崩溃" data-category="suspense" data-type-group="movie" data-year-group="2020s" data-year="2028">
+                <a href="./movie-941.html">
+                    <span class="ranking-index">11</span>
+                    <img src="./41.jpg" alt="沉睡百万年" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>沉睡百万年</strong>
+                        <em>一艘殖民飞船因故障“沉睡”了百万年,船员醒来后发现地球文明已更迭二十八次,而飞船本身就是文明的种子。</em>
+                        <span>悬疑 · 美国 · 2028</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="迷雾惊魂" data-search="迷雾惊魂 韩国 电影 悬疑/惊悚/灾难 迷雾 孤岛 连环杀人 心理博弈 全女性阵容" data-category="romance" data-type-group="movie" data-year-group="2020s" data-year="2024">
+                <a href="./movie-1717.html">
+                    <span class="ranking-index">12</span>
+                    <img src="./67.jpg" alt="迷雾惊魂" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>迷雾惊魂</strong>
+                        <em>一场浓雾将度假岛封锁,七名女性发现她们之中藏着一个连环杀手。</em>
+                        <span>爱情 · 韩国 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="神秘粉红" data-search="神秘粉红 日本 电影/动画 奇幻/悬疑/少女 颜色 失踪 心理" data-category="animation" data-type-group="animation" data-year-group="2020s" data-year="2026">
+                <a href="./movie-173.html">
+                    <span class="ranking-index">13</span>
+                    <img src="./23.jpg" alt="神秘粉红" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>神秘粉红</strong>
+                        <em>在一个所有颜色都在消失的灰白世界里,只有少女能看到一抹“神秘粉红”,而这抹粉红指向了失踪好友的所在。</em>
+                        <span>动画 · 日本 · 2026</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="小提琴天后慕特:爱乐一生" data-search="小提琴天后慕特:爱乐一生 德国 电影 传记/音乐 小提琴家 艺术人生 师生传承 女性力量" data-category="variety" data-type-group="movie" data-year-group="2020s" data-year="2025">
+                <a href="./movie-367.html">
+                    <span class="ranking-index">14</span>
+                    <img src="./67.jpg" alt="小提琴天后慕特:爱乐一生" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>小提琴天后慕特:爱乐一生</strong>
+                        <em>从神童到天后,安妮-索菲·慕特四十年职业生涯中最私密的瞬间,以及与指挥大师卡拉扬的“复杂友谊”。</em>
+                        <span>综艺 · 德国 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="跨越彩虹" data-search="跨越彩虹 韩国 剧集 奇幻/爱情 穿越 治愈 校园 纯爱 平行世界" data-category="series" data-type-group="series" data-year-group="2020s" data-year="2026">
+                <a href="./movie-1523.html">
+                    <span class="ranking-index">15</span>
+                    <img src="./23.jpg" alt="跨越彩虹" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>跨越彩虹</strong>
+                        <em>一封来自未来的信,让痛失爱人的女教师得以重返过去,但每次拯救都会让她失去一样珍贵的东西。</em>
+                        <span>剧集 · 韩国 · 2026</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="赵树理" data-search="赵树理 中国大陆 剧集 传记/历史/剧情 作家 乡村 土改 文学 年代" data-category="history" data-type-group="series" data-year-group="2020s" data-year="2025">
+                <a href="./movie-1932.html">
+                    <span class="ranking-index">16</span>
+                    <img src="./132.jpg" alt="赵树理" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>赵树理</strong>
+                        <em>山药蛋派”创始人赵树理在创作《小二黑结婚》前后,与时代洪流碰撞的挣扎与坚持。</em>
+                        <span>古装 · 中国大陆 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="甘粕与玛索丹" data-search="甘粕与玛索丹 日本 动画剧集 奇幻/日常/军武 萌系 军事 萝莉 飞行员 奇美拉" data-category="series" data-type-group="animation" data-year-group="2020s" data-year="2024">
+                <a href="./movie-1434.html">
+                    <span class="ranking-index">17</span>
+                    <img src="./84.jpg" alt="甘粕与玛索丹" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>甘粕与玛索丹</strong>
+                        <em>二战结束后,日本自卫队秘密基地里,少女飞行员与能变身成战机的神秘生物“玛索丹”的同居日常。</em>
+                        <span>剧集 · 日本 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="安提戈涅" data-search="安提戈涅 法国 电影 剧情/历史 现代改编 法律与人性 女性反抗 悲剧" data-category="global" data-type-group="series" data-year-group="2020s" data-year="2025">
+                <a href="./movie-346.html">
+                    <span class="ranking-index">18</span>
+                    <img src="./46.jpg" alt="安提戈涅" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>安提戈涅</strong>
+                        <em>当代巴黎郊区,年轻的穆斯林女孩为了给哥哥举行正规葬礼,不惜对抗整个市政系统和极端组织,成为现代悲剧英雄。</em>
+                        <span>欧美 · 法国 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="首都消失" data-search="首都消失 日本 电影 灾难,悬疑,科幻 东京 消失 集体失忆 政治阴谋" data-category="fantasy" data-type-group="movie" data-year-group="2020s" data-year="2025">
+                <a href="./movie-1219.html">
+                    <span class="ranking-index">19</span>
+                    <img src="./19.jpg" alt="首都消失" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>首都消失</strong>
+                        <em>一夜之间,东京23区连同千万人凭空消失,只剩下一个巨大的圆形深坑。</em>
+                        <span>奇幻 · 日本 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="梨子树" data-search="梨子树 中国大陆 电影 文艺/乡村 留守儿童 等待 诗意 长镜头" data-category="movie" data-type-group="movie" data-year-group="2020s" data-year="2026">
+                <a href="./movie-270.html">
+                    <span class="ranking-index">20</span>
+                    <img src="./120.jpg" alt="梨子树" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>梨子树</strong>
+                        <em>村里有棵百年梨树,每年结果时,留守小女孩都会爬上树顶,望向公路,等爸妈回来。</em>
+                        <span>电影 · 中国大陆 · 2026</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="巴斯克维尔的猎犬" data-search="巴斯克维尔的猎犬 英国 电影 悬疑/犯罪/恐怖 福尔摩斯 哥特 血腥猎奇 改编" data-category="movie" data-type-group="movie" data-year-group="2020s" data-year="2026">
+                <a href="./movie-1253.html">
+                    <span class="ranking-index">21</span>
+                    <img src="./53.jpg" alt="巴斯克维尔的猎犬" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>巴斯克维尔的猎犬</strong>
+                        <em>这一次,猎犬不是传说,而是基因编辑出的完美杀人机器。</em>
+                        <span>电影 · 英国 · 2026</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="工具箱杀手" data-search="工具箱杀手 美国 电影 恐怖/惊悚 密室 连环杀手 血腥 反转 悬疑" data-category="global" data-type-group="movie" data-year-group="2020s" data-year="2026">
+                <a href="./movie-1620.html">
+                    <span class="ranking-index">22</span>
+                    <img src="./120.jpg" alt="工具箱杀手" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>工具箱杀手</strong>
+                        <em>一群网红闯入废弃的凶宅直播,却意外唤醒了那位喜欢用电钻“装修”人骨的艺术家杀手。</em>
+                        <span>欧美 · 美国 · 2026</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="恐龙之子" data-search="恐龙之子 美国 电影 科幻家庭 克隆 亲子 古生物 冒险 伦理" data-category="fantasy" data-type-group="movie" data-year-group="2020s" data-year="2026">
+                <a href="./movie-907.html">
+                    <span class="ranking-index">23</span>
+                    <img src="./7.jpg" alt="恐龙之子" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>恐龙之子</strong>
+                        <em>单身父亲偷偷克隆了已灭绝的伶盗龙,当女儿养。</em>
+                        <span>奇幻 · 美国 · 2026</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="血薄荷" data-search="血薄荷 韩国 电影 复仇,动作,惊悚 女性复仇 残酷美学 以暴制暴 体制黑暗" data-category="romance" data-type-group="movie" data-year-group="2020s" data-year="2025">
+                <a href="./movie-68.html">
+                    <span class="ranking-index">24</span>
+                    <img src="./68.jpg" alt="血薄荷" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>血薄荷</strong>
+                        <em>一罐普通的薄荷糖,是女杀手用来缓解咽喉痛的药,也是她每次杀人后留在现场的“名片”。</em>
+                        <span>爱情 · 韩国 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="碰触" data-search="碰触 日本/美国 电影 科幻,爱情,剧情 未来 触觉科技 孤独 温暖" data-category="global" data-type-group="series" data-year-group="2020s" data-year="2025">
+                <a href="./movie-1177.html">
+                    <span class="ranking-index">25</span>
+                    <img src="./127.jpg" alt="碰触" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>碰触</strong>
+                        <em>在禁止肢体接触的未来社会,两个“敏感者”通过非法触感芯片,体验到了真实的拥抱。</em>
+                        <span>欧美 · 日本/美国 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="一路繁花相送番外" data-search="一路繁花相送番外 中国 电影 爱情,剧情 公路 遗憾 重逢 雨季" data-category="romance" data-type-group="series" data-year-group="2020s" data-year="2026">
+                <a href="./movie-1371.html">
+                    <span class="ranking-index">26</span>
+                    <img src="./21.jpg" alt="一路繁花相送番外" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>一路繁花相送番外</strong>
+                        <em>十年后,错过的恋人在一条即将拆迁的公路尽头,收到了对方寄来的婚礼请柬。</em>
+                        <span>爱情 · 中国 · 2026</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="金属口红" data-search="金属口红 日本 电影 科幻,动作,赛博朋克 人造人 反抗 闺蜜 改装" data-category="action" data-type-group="movie" data-year-group="2020s" data-year="2025">
+                <a href="./movie-810.html">
+                    <span class="ranking-index">27</span>
+                    <img src="./60.jpg" alt="金属口红" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>金属口红</strong>
+                        <em>在人类与人造人共生的城市,一名妓女与一名“报废”的战士机甲成了唯一的朋友。</em>
+                        <span>动作 · 日本 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="失落之地" data-search="失落之地 美国 电影 动作,冒险,科幻 末日 废土 寻父 机甲" data-category="fantasy" data-type-group="movie" data-year-group="2020s" data-year="2023">
+                <a href="./movie-949.html">
+                    <span class="ranking-index">28</span>
+                    <img src="./49.jpg" alt="失落之地" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>失落之地</strong>
+                        <em>核战30年后,一个少女根据父亲留下的加密录音,在废土上寻找传说中的“失落之地”绿洲。</em>
+                        <span>奇幻 · 美国 · 2023</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="胡桃夹子和四个王国国语" data-search="胡桃夹子和四个王国国语 美国 电影 奇幻、冒险、家庭 童话改编 王国大战 国语配音版 公主觉醒" data-category="global" data-type-group="movie" data-year-group="2020s" data-year="2024">
+                <a href="./movie-152.html">
+                    <span class="ranking-index">29</span>
+                    <img src="./2.jpg" alt="胡桃夹子和四个王国国语" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>胡桃夹子和四个王国国语</strong>
+                        <em>克拉拉在寻找钥匙的过程中发现,四个王国的真正威胁并非暴君,而是她自己体内流着的第二任女王之血。</em>
+                        <span>欧美 · 美国 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="今天的晚餐就是你" data-search="今天的晚餐就是你 日本 电影 奇幻/爱情/黑色喜剧 食人 治愈 纯爱 魔幻 反差" data-category="asia" data-type-group="series" data-year-group="2020s" data-year="2025">
+                <a href="./movie-1114.html">
+                    <span class="ranking-index">30</span>
+                    <img src="./64.jpg" alt="今天的晚餐就是你" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>今天的晚餐就是你</strong>
+                        <em>社畜在深夜便利店被美艳女食人魔搭讪,对方声称要吃掉他,两人却阴差阳错开始了同居生活。</em>
+                        <span>亚洲 · 日本 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="民主万岁" data-search="民主万岁 法国 剧集 剧情/政治/讽刺 选举风云 幕后操盘手 黑色幽默" data-category="history" data-type-group="series" data-year-group="2020s" data-year="2025">
+                <a href="./movie-1240.html">
+                    <span class="ranking-index">31</span>
+                    <img src="./40.jpg" alt="民主万岁" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>民主万岁</strong>
+                        <em>一支专门帮烂候选人赢选举的竞选团队,这次接了个烫手山芋:让一头驴当选镇长。</em>
+                        <span>古装 · 法国 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="乌龙特工" data-search="乌龙特工 中国大陆 电影 喜剧,动作 山寨特工 小镇 卧底 搞笑 反转" data-category="movie" data-type-group="series" data-year-group="2020s" data-year="2024">
+                <a href="./movie-1350.html">
+                    <span class="ranking-index">32</span>
+                    <img src="./150.jpg" alt="乌龙特工" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>乌龙特工</strong>
+                        <em>一个十八线小城的保安队长,被误认为总部派来的王牌特工,被派去调查一件丢失的高科技配方,结果笑料百出。</em>
+                        <span>电影 · 中国大陆 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="篮球旋风" data-search="篮球旋风 日本 剧集 动画,运动 热血 校园 街球 成长 团队" data-category="animation" data-type-group="animation" data-year-group="2020s" data-year="2026">
+                <a href="./movie-857.html">
+                    <span class="ranking-index">33</span>
+                    <img src="./107.jpg" alt="篮球旋风" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>篮球旋风</strong>
+                        <em>身高只有165cm的天才街球手进入篮球豪门高中,用眼花缭乱的花式街头技巧挑战着传统篮球的教条。</em>
+                        <span>动画 · 日本 · 2026</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="黑洞启示录" data-search="黑洞启示录 美国/英国 电影 科幻/惊悚 黑洞 时间膨胀 科学实验 毁灭" data-category="movie" data-type-group="movie" data-year-group="2020s" data-year="2025">
+                <a href="./movie-249.html">
+                    <span class="ranking-index">34</span>
+                    <img src="./99.jpg" alt="黑洞启示录" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>黑洞启示录</strong>
+                        <em>物理学家意外造出微型黑洞,地球被吞噬倒计时仅为72小时。</em>
+                        <span>电影 · 美国/英国 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="著魔 印尼篇" data-search="著魔 印尼篇 印度尼西亚 电影 恐怖 降头 巫术 乡村 信仰 身体恐怖" data-category="movie" data-type-group="movie" data-year-group="2020s" data-year="2024">
+                <a href="./movie-325.html">
+                    <span class="ranking-index">35</span>
+                    <img src="./25.jpg" alt="著魔 印尼篇" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>著魔 印尼篇</strong>
+                        <em>一位雅加达的女记者去印尼偏远乡村调查降头术,结果自己也被下了“爱上猪”的诡异巫术。</em>
+                        <span>电影 · 印度尼西亚 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="玻碎玻璃理论" data-search="玻碎玻璃理论 德国 电影 剧情,悬疑 心理 悬疑 哲学 人性 实验" data-category="suspense" data-type-group="series" data-year-group="2020s" data-year="2025">
+                <a href="./movie-1460.html">
+                    <span class="ranking-index">36</span>
+                    <img src="./110.jpg" alt="玻碎玻璃理论" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>玻碎玻璃理论</strong>
+                        <em>一个破碎玻璃展览馆里,策展人说每一块碎玻璃都是一个被谋杀者的“最后一面镜子”。</em>
+                        <span>悬疑 · 德国 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="超速" data-search="超速 中国香港 电影 动作/犯罪 飙车 卧底 复仇 午夜狂飙 兄弟情" data-category="asia" data-type-group="movie" data-year-group="2020s" data-year="2025">
+                <a href="./movie-616.html">
+                    <span class="ranking-index">37</span>
+                    <img src="./16.jpg" alt="超速" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>超速</strong>
+                        <em>为了替惨死的搭档报仇,一名卧底警察必须在午夜街头用一场必死的飙车赛引出幕后毒枭。</em>
+                        <span>亚洲 · 中国香港 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="西蒂·阿克巴丽" data-search="西蒂·阿克巴丽 印度 电影 历史、史诗、剧情 莫卧儿帝国 女性力量 宫廷权谋 传记 视觉奇观" data-category="history" data-type-group="series" data-year-group="2020s" data-year="2025">
+                <a href="./movie-553.html">
+                    <span class="ranking-index">38</span>
+                    <img src="./103.jpg" alt="西蒂·阿克巴丽" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>西蒂·阿克巴丽</strong>
+                        <em>被历史遗忘的莫卧儿皇后西蒂·阿克巴丽,用智慧与勇气在男人主导的帝国中书写了自己的规则。</em>
+                        <span>古装 · 印度 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="舞蹈风暴第二季" data-search="舞蹈风暴第二季 中国大陆 综艺 真人秀/歌舞竞技 舞蹈 竞技 舞台艺术 明星舞者" data-category="variety" data-type-group="variety" data-year-group="2020s" data-year="2025">
+                <a href="./movie-1890.html">
+                    <span class="ranking-index">39</span>
+                    <img src="./90.jpg" alt="舞蹈风暴第二季" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>舞蹈风暴第二季</strong>
+                        <em>顶尖舞者齐聚舞台,用肢体讲故事,用情感点燃风暴。</em>
+                        <span>综艺 · 中国大陆 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="宝嘉先生" data-search="宝嘉先生 法国 电影 剧情,悬疑,奇幻 贵族 记忆 反转 身份认同 氛围感" data-category="fantasy" data-type-group="series" data-year-group="2020s" data-year="2026">
+                <a href="./movie-1148.html">
+                    <span class="ranking-index">40</span>
+                    <img src="./98.jpg" alt="宝嘉先生" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>宝嘉先生</strong>
+                        <em>一位失忆的贵族男子坚信自己名叫宝嘉,但全镇人都说他是三十年前已故的骗子,前来索命。</em>
+                        <span>奇幻 · 法国 · 2026</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="艺伎回忆录" data-search="艺伎回忆录 日本/美国 电影 剧情/历史/爱情 艺伎 昭和 女性成长 古典美学 命运" data-category="history" data-type-group="series" data-year-group="2020s" data-year="2026">
+                <a href="./movie-1245.html">
+                    <span class="ranking-index">41</span>
+                    <img src="./45.jpg" alt="艺伎回忆录" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>艺伎回忆录</strong>
+                        <em>二战前夕,一个渔村少女被卖入京都祇园,历经血腥倾轧终成头牌艺伎,却在战后遇到了改变她一生的美国军官。</em>
+                        <span>古装 · 日本/美国 · 2026</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="梦寄东山" data-search="梦寄东山 中国大陆 电影 剧情,家庭,悬疑 遗产 梦境 故乡 亲情 秘密" data-category="suspense" data-type-group="series" data-year-group="2020s" data-year="2025">
+                <a href="./movie-123.html">
+                    <span class="ranking-index">42</span>
+                    <img src="./123.jpg" alt="梦寄东山" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>梦寄东山</strong>
+                        <em>父亲去世后留下遗嘱,要求三兄妹重回东山老宅同住七日,才能继承遗产。</em>
+                        <span>悬疑 · 中国大陆 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="超能立方·动态漫" data-search="超能立方·动态漫 中国大陆 动态漫画 科幻/异能/搞笑 次元穿越 黑科技 漫改 吐槽役 单元剧" data-category="animation" data-type-group="series" data-year-group="2020s" data-year="2024">
+                <a href="./movie-781.html">
+                    <span class="ranking-index">43</span>
+                    <img src="./31.jpg" alt="超能立方·动态漫" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>超能立方·动态漫</strong>
+                        <em>一个普通的立方体魔方,每转动一面就能给使用者一种奇葩超能力,副作用是必须要在24小时内完成一个社死任务。</em>
+                        <span>动画 · 中国大陆 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="未知物" data-search="未知物 德国 电影 科幻/悬疑 实验室 身份危机 基因编辑 哲学 反转" data-category="movie" data-type-group="movie" data-year-group="2020s" data-year="2025">
+                <a href="./movie-1224.html">
+                    <span class="ranking-index">44</span>
+                    <img src="./24.jpg" alt="未知物" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>未知物</strong>
+                        <em>一名生物学家在分析一个来自深海的热液样本时,发现样本的DNA序列与他自己的完全一致。</em>
+                        <span>电影 · 德国 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="失踪的女儿" data-search="失踪的女儿 日本 电影 悬疑/剧情/犯罪 社会派 女性 反转 家庭 复仇" data-category="suspense" data-type-group="series" data-year-group="2020s" data-year="2022">
+                <a href="./movie-928.html">
+                    <span class="ranking-index">45</span>
+                    <img src="./28.jpg" alt="失踪的女儿" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>失踪的女儿</strong>
+                        <em>女儿失踪十年后突然出现在街头,她却对警方说:“这个女人不是我女儿。</em>
+                        <span>悬疑 · 日本 · 2022</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="蒙上你的眼:逃出巴塞罗那" data-search="蒙上你的眼:逃出巴塞罗那 西班牙 电影 科幻,惊悚,恐怖 蒙眼 末世 西班牙 寄生 逃生" data-category="suspense" data-type-group="movie" data-year-group="2020s" data-year="2023">
+                <a href="./movie-456.html">
+                    <span class="ranking-index">46</span>
+                    <img src="./6.jpg" alt="蒙上你的眼:逃出巴塞罗那" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>蒙上你的眼:逃出巴塞罗那</strong>
+                        <em>盲女在巴塞罗那的末世中求生,却发现自己可能是唯一免疫者。</em>
+                        <span>悬疑 · 西班牙 · 2023</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="古田会议" data-search="古田会议 中国大陆 电影 历史,传记 党史 思想建党 辩论 转折点" data-category="history" data-type-group="movie" data-year-group="2020s" data-year="2024">
+                <a href="./movie-519.html">
+                    <span class="ranking-index">47</span>
+                    <img src="./69.jpg" alt="古田会议" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>古田会议</strong>
+                        <em>1929年,一场关乎红军生死存亡的会议,在争论与碰撞中确立了“思想建党”的根本原则。</em>
+                        <span>古装 · 中国大陆 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="铁面虎将" data-search="铁面虎将 中国大陆 电影 动作/战争/历史 古代战争 铠甲 将军 忠义 动作" data-category="movie" data-type-group="movie" data-year-group="2020s" data-year="2024">
+                <a href="./movie-1987.html">
+                    <span class="ranking-index">48</span>
+                    <img src="./37.jpg" alt="铁面虎将" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>铁面虎将</strong>
+                        <em>明朝末年,一支戴铁面的精锐部队陷入敌军重围,将军为保全军覆没,决定只身引开追兵。</em>
+                        <span>电影 · 中国大陆 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="爱情无全顺" data-search="爱情无全顺 中国台湾 电视剧 爱情/校园/奇幻 学渣逆袭 平行选择 甜蜜轻喜" data-category="series" data-type-group="series" data-year-group="2020s" data-year="2024">
+                <a href="./movie-1143.html">
+                    <span class="ranking-index">49</span>
+                    <img src="./93.jpg" alt="爱情无全顺" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>爱情无全顺</strong>
+                        <em>成绩倒数第一的女大学生意外获得“人生重选器”,每按一次就能体验和不同男神恋爱的平行世界。</em>
+                        <span>剧集 · 中国台湾 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="猎头行动" data-search="猎头行动 中国大陆 剧集 职场,商战,悬疑 猎头行业 商业谍战 高智商对决 精英人设 快节奏" data-category="series" data-type-group="series" data-year-group="2020s" data-year="2024">
+                <a href="./movie-1877.html">
+                    <span class="ranking-index">50</span>
+                    <img src="./77.jpg" alt="猎头行动" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>猎头行动</strong>
+                        <em>顶级猎头受雇挖角对手公司的CEO,却发现这个“猎物”竟是自己失散多年的亲生父亲。</em>
+                        <span>剧集 · 中国大陆 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="坏伙伴" data-search="坏伙伴 法国 电影 剧情,犯罪,青春 青少年犯罪 边缘群体 友谊 社会写实" data-category="movie" data-type-group="series" data-year-group="2020s" data-year="2023">
+                <a href="./movie-76.html">
+                    <span class="ranking-index">51</span>
+                    <img src="./76.jpg" alt="坏伙伴" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>坏伙伴</strong>
+                        <em>巴黎郊区三个辍学少年为了钱加入偷车团伙,在一次失控的暴力抢劫后,他们必须在兄弟义气和良心审判之间做出选择。</em>
+                        <span>电影 · 法国 · 2023</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="劳拉的星星在中国" data-search="劳拉的星星在中国 德国/中国大陆 电影 动画,奇幻,家庭 友谊 跨国文化 冒险 治愈 童年" data-category="animation" data-type-group="animation" data-year-group="2020s" data-year="2024">
+                <a href="./movie-228.html">
+                    <span class="ranking-index">52</span>
+                    <img src="./78.jpg" alt="劳拉的星星在中国" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>劳拉的星星在中国</strong>
+                        <em>小女孩劳拉和她的星星朋友来到中国,为了找回丢失的光辉,他们展开了一场长城上的冒险。</em>
+                        <span>动画 · 德国/中国大陆 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="妳是我眼中的苹果" data-search="妳是我眼中的苹果 中国台湾 电影 爱情/同性 女同 青春校园 初恋" data-category="asia" data-type-group="movie" data-year-group="2020s" data-year="2025">
+                <a href="./movie-1780.html">
+                    <span class="ranking-index">53</span>
+                    <img src="./130.jpg" alt="妳是我眼中的苹果" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>妳是我眼中的苹果</strong>
+                        <em>两名高中女篮队员约定毕业那天告白,却因一场车祸让其中一人失明。</em>
+                        <span>亚洲 · 中国台湾 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="火山王" data-search="火山王 韩国 剧集 动作/古装/奇幻 火山 熔岩 冷兵器 末日" data-category="history" data-type-group="series" data-year-group="2020s" data-year="2024">
+                <a href="./movie-1329.html">
+                    <span class="ranking-index">54</span>
+                    <img src="./129.jpg" alt="火山王" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>火山王</strong>
+                        <em>高丽时期,一座活火山突然喷发,岩浆中爬出了上百个手持熔岩武器的“火魔”,只有皇室后裔能驾驭火山之力与之对抗。</em>
+                        <span>古装 · 韩国 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="太空学员" data-search="太空学员 美国 电影 科幻,冒险 火星 训练 意外发射 新人 极限求生" data-category="action" data-type-group="movie" data-year-group="2020s" data-year="2026">
+                <a href="./movie-136.html">
+                    <span class="ranking-index">55</span>
+                    <img src="./136.jpg" alt="太空学员" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>太空学员</strong>
+                        <em>四名还没毕业的太空学员因模拟器故障被误射向火星,他们的毕业考变成了人类的生死存亡。</em>
+                        <span>动作 · 美国 · 2026</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="闭眼第二季" data-search="闭眼第二季 中国大陆 剧集 悬疑奇幻 通灵 陈年悬案 双线叙事 记忆读取" data-category="series" data-type-group="series" data-year-group="2020s" data-year="2024">
+                <a href="./movie-464.html">
+                    <span class="ranking-index">56</span>
+                    <img src="./14.jpg" alt="闭眼第二季" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>闭眼第二季</strong>
+                        <em>新一季中,她一闭眼看到的不是过去,而是未来发生的命案。</em>
+                        <span>剧集 · 中国大陆 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="山巅的呼唤" data-search="山巅的呼唤 尼泊尔/美国 电影 冒险,剧情 登山 绝境 信仰 真实事件改编" data-category="action" data-type-group="series" data-year-group="2020s" data-year="2024">
+                <a href="./movie-422.html">
+                    <span class="ranking-index">57</span>
+                    <img src="./122.jpg" alt="山巅的呼唤" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>山巅的呼唤</strong>
+                        <em>一支登山队在8000米海拔的死亡地带,听到了山顶传来的不明呼唤声。</em>
+                        <span>动作 · 尼泊尔/美国 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="倾城" data-search="倾城 中国大陆 电影 爱情/灾难 地震 虐恋 救援 生死" data-category="movie" data-type-group="movie" data-year-group="2020s" data-year="2023">
+                <a href="./movie-401.html">
+                    <span class="ranking-index">58</span>
+                    <img src="./101.jpg" alt="倾城" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>倾城</strong>
+                        <em>十年前的地震废墟下,他抛弃女友独自逃生;十年后同样的灾难降临,她是唯一能救他的医生。</em>
+                        <span>电影 · 中国大陆 · 2023</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="追捕2003" data-search="追捕2003 日本/中国大陆 电影 动作/犯罪 翻拍 跨国追捕 警匪 双雄 高仓健致敬" data-category="suspense" data-type-group="movie" data-year-group="2020s" data-year="2024">
+                <a href="./movie-629.html">
+                    <span class="ranking-index">59</span>
+                    <img src="./29.jpg" alt="追捕2003" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>追捕2003</strong>
+                        <em>2003年,一名中国刑警为追捕逃犯进入日本,却与日本警方通缉的“另类侠盗”联手,对抗真正的黑手。</em>
+                        <span>悬疑 · 日本/中国大陆 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="情深爱更浓" data-search="情深爱更浓 中国大陆 剧集 爱情/家庭/年代 父母爱情 知青 一生一世 催泪" data-category="history" data-type-group="series" data-year-group="2020s" data-year="2025">
+                <a href="./movie-726.html">
+                    <span class="ranking-index">60</span>
+                    <img src="./126.jpg" alt="情深爱更浓" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>情深爱更浓</strong>
+                        <em>从知青下乡到疫情解封,一对恋人用六十年证明:最深的爱不是轰轰烈烈,而是为你守一座空城。</em>
+                        <span>古装 · 中国大陆 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="19号消防局第二季" data-search="19号消防局第二季 美国 剧集 动作,剧情,职业 消防员 生死一线 团队情谊 灾难救援" data-category="action" data-type-group="series" data-year-group="2020s" data-year="2024">
+                <a href="./movie-1974.html">
+                    <span class="ranking-index">61</span>
+                    <img src="./24.jpg" alt="19号消防局第二季" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>19号消防局第二季</strong>
+                        <em>西雅图最忙的消防站迎来了新队长,而他正是三年前在火场失踪的传奇队员。</em>
+                        <span>动作 · 美国 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="拍摄中" data-search="拍摄中 韩国 电影 喜剧,剧情,惊悚 直播 荒诞 反转 讽刺" data-category="comedy" data-type-group="series" data-year-group="2020s" data-year="2023">
+                <a href="./movie-734.html">
+                    <span class="ranking-index">62</span>
+                    <img src="./134.jpg" alt="拍摄中" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>拍摄中</strong>
+                        <em>一个穷困的直播团队接到神秘委托:全程跟拍一场“真实的绑架案”,却发现这一切都是针对他们自己的死亡陷阱。</em>
+                        <span>喜剧 · 韩国 · 2023</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="弟弟2024" data-search="弟弟2024 中国台湾 电影 家庭,剧情,青春 留守儿童 兄弟情 乡村 成长 现实题材" data-category="romance" data-type-group="series" data-year-group="2020s" data-year="2024">
+                <a href="./movie-650.html">
+                    <span class="ranking-index">63</span>
+                    <img src="./50.jpg" alt="弟弟2024" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>弟弟2024</strong>
+                        <em>暑假里,留守乡村的弟弟意外发现,进城打工的哥哥其实早已因事故去世,每周的电话都是录音。</em>
+                        <span>爱情 · 中国台湾 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="死亡幽暗" data-search="死亡幽暗 英国 电影 恐怖,心理惊悚 古宅 心理扭曲 反转" data-category="suspense" data-type-group="movie" data-year-group="2020s" data-year="2026">
+                <a href="./movie-865.html">
+                    <span class="ranking-index">64</span>
+                    <img src="./115.jpg" alt="死亡幽暗" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>死亡幽暗</strong>
+                        <em>一位治疗失眠的心理医生搬进了一座偏僻的古宅,却发现那里的黑暗能让人的潜意识噩梦实体化。</em>
+                        <span>悬疑 · 英国 · 2026</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="侦探成旭之千年迷局" data-search="侦探成旭之千年迷局 中国大陆 剧集 悬疑/古装/推理 民国 本格推理 连环案 宿敌 烧脑" data-category="series" data-type-group="series" data-year-group="2020s" data-year="2024">
+                <a href="./movie-1468.html">
+                    <span class="ranking-index">65</span>
+                    <img src="./118.jpg" alt="侦探成旭之千年迷局" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>侦探成旭之千年迷局</strong>
+                        <em>三十年代上海滩,侦探成旭发现三起看似不相干的命案,都指向一份消失千年的《兰亭序》真迹。</em>
+                        <span>剧集 · 中国大陆 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="我的爸呀" data-search="我的爸呀 中国香港 电影 剧情,家庭,喜剧 父子 阿兹海默 外卖员 港味 催泪" data-category="romance" data-type-group="series" data-year-group="2020s" data-year="2025">
+                <a href="./movie-600.html">
+                    <span class="ranking-index">66</span>
+                    <img src="./150.jpg" alt="我的爸呀" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>我的爸呀</strong>
+                        <em>一个送外卖的废柴青年,不得不照顾患了阿兹海默症、自称“香港赌神”的老爸,两人在送餐路上啼笑皆非。</em>
+                        <span>爱情 · 中国香港 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="神枪杀手" data-search="神枪杀手 中国香港 电影 动作/犯罪/武术 枪战 复仇 师徒 暴力美学" data-category="action" data-type-group="movie" data-year-group="2020s" data-year="2025">
+                <a href="./movie-1156.html">
+                    <span class="ranking-index">67</span>
+                    <img src="./106.jpg" alt="神枪杀手" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>神枪杀手</strong>
+                        <em>他用一把祖传驳壳枪,在九龙城寨废墟里,挑战整个东南亚新型军火联盟。</em>
+                        <span>动作 · 中国香港 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="欢迎来到隔离病房" data-search="欢迎来到隔离病房 日本 电影 剧情/喜剧/悬疑 精神病院 荒诞 黑色幽默 社会隐喻 群像" data-category="comedy" data-type-group="series" data-year-group="2020s" data-year="2024">
+                <a href="./movie-642.html">
+                    <span class="ranking-index">68</span>
+                    <img src="./42.jpg" alt="欢迎来到隔离病房" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>欢迎来到隔离病房</strong>
+                        <em>一个“正常”的上班族被误关进精神病隔离病房,却发现所有“病人”都比外面的世界更清醒。</em>
+                        <span>喜剧 · 日本 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="预兆" data-search="预兆 美国 电影 科幻悬疑 量子力学 宿命论 高概念烧脑 惊悚氛围" data-category="fantasy" data-type-group="movie" data-year-group="2020s" data-year="2026">
+                <a href="./movie-1696.html">
+                    <span class="ranking-index">69</span>
+                    <img src="./46.jpg" alt="预兆" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>预兆</strong>
+                        <em>一台能预测死亡的量子计算机,却让预言者本人成为首个无法被记录的“数据幽灵”。</em>
+                        <span>奇幻 · 美国 · 2026</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="绝对公平" data-search="绝对公平 美国 电影 剧情/惊悚 职场斗争 性别权力 金融 悬疑" data-category="suspense" data-type-group="series" data-year-group="2020s" data-year="2023">
+                <a href="./movie-55.html">
+                    <span class="ranking-index">70</span>
+                    <img src="./55.jpg" alt="绝对公平" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>绝对公平</strong>
+                        <em>对冲基金的女分析师被男友抢走升职机会,她决定用尽一切手段夺回“绝对公平”。</em>
+                        <span>悬疑 · 美国 · 2023</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="连体" data-search="连体 中国香港/泰国 电影 恐怖/惊悚 连体双胞胎 灵异 手术 复仇" data-category="asia" data-type-group="movie" data-year-group="2020s" data-year="2023">
+                <a href="./movie-1898.html">
+                    <span class="ranking-index">71</span>
+                    <img src="./98.jpg" alt="连体" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>连体</strong>
+                        <em>一对连体双胞胎被强行分离后,活下来的那个总能看到死去的姐妹站在角落里。</em>
+                        <span>亚洲 · 中国香港/泰国 · 2023</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="可疑的邻居们" data-search="可疑的邻居们 西班牙 剧集 悬疑,惊悚 公寓 监视 反转 封闭空间" data-category="suspense" data-type-group="series" data-year-group="2020s" data-year="2024">
+                <a href="./movie-1586.html">
+                    <span class="ranking-index">72</span>
+                    <img src="./86.jpg" alt="可疑的邻居们" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>可疑的邻居们</strong>
+                        <em>一栋七户人家的公寓楼里,每晚都有人死去,而凶手可能正是你自己。</em>
+                        <span>悬疑 · 西班牙 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="隐私保险箱" data-search="隐私保险箱 中国内地 电影 剧情,悬疑 科技 人性 伦理 黑色幽默" data-category="comedy" data-type-group="series" data-year-group="2020s" data-year="2024">
+                <a href="./movie-671.html">
+                    <span class="ranking-index">73</span>
+                    <img src="./71.jpg" alt="隐私保险箱" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>隐私保险箱</strong>
+                        <em>一家公司推出“数字遗产”服务,将逝者的云端数据存入保险箱,却意外打开了潘多拉的魔盒。</em>
+                        <span>喜剧 · 中国内地 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="恐怖俱乐部" data-search="恐怖俱乐部 泰国 电影 恐怖,悬疑,惊悚 密室 直播 校园怪谈 诅咒" data-category="suspense" data-type-group="movie" data-year-group="2020s" data-year="2024">
+                <a href="./movie-920.html">
+                    <span class="ranking-index">74</span>
+                    <img src="./20.jpg" alt="恐怖俱乐部" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>恐怖俱乐部</strong>
+                        <em>五名大学生为博取流量进入废弃的“恐怖俱乐部”鬼屋直播,却触发了真正的死亡游戏。</em>
+                        <span>悬疑 · 泰国 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="黄昏时分、牵着手" data-search="黄昏时分、牵着手 日本 电视剧 剧情/爱情/生活 童年约定 久别重逢 治愈系 慢节奏" data-category="asia" data-type-group="series" data-year-group="2020s" data-year="2023">
+                <a href="./movie-1822.html">
+                    <span class="ranking-index">75</span>
+                    <img src="./22.jpg" alt="黄昏时分、牵着手" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>黄昏时分、牵着手</strong>
+                        <em>一对约定在黄昏牵手就不再分开的青梅竹马,因命运失散二十年后在故乡的夕阳下重逢。</em>
+                        <span>亚洲 · 日本 · 2023</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="金鹰宝藏" data-search="金鹰宝藏 波兰 电影 冒险,历史,动作 纳粹黄金 雪山 寻宝" data-category="history" data-type-group="movie" data-year-group="2020s" data-year="2025">
+                <a href="./movie-1953.html">
+                    <span class="ranking-index">76</span>
+                    <img src="./3.jpg" alt="金鹰宝藏" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>金鹰宝藏</strong>
+                        <em>二战老兵临终前留下一枚金鹰徽章,孙女和死对头的孙子被迫组队,寻找传说中“琥珀厅”的黄金。</em>
+                        <span>古装 · 波兰 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="烈燄狂澜" data-search="烈燄狂澜 澳大利亚 剧集 灾难,剧情,动作 山火危机 英雄消防员 生存挑战 群像戏" data-category="series" data-type-group="series" data-year-group="2020s" data-year="2025">
+                <a href="./movie-608.html">
+                    <span class="ranking-index">77</span>
+                    <img src="./8.jpg" alt="烈燄狂澜" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>烈燄狂澜</strong>
+                        <em>一场史无前例的超级山火席卷小镇,被困的人们必须在烈火与人心之间杀出一条血路。</em>
+                        <span>剧集 · 澳大利亚 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="我把忠诚献给你" data-search="我把忠诚献给你 中国大陆 电影 谍战/悬疑/历史 双面间谍 民国 身份认同 罗生门" data-category="suspense" data-type-group="movie" data-year-group="2020s" data-year="2028">
+                <a href="./movie-1722.html">
+                    <span class="ranking-index">78</span>
+                    <img src="./72.jpg" alt="我把忠诚献给你" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>我把忠诚献给你</strong>
+                        <em>1943年的上海,一名代号“梧桐”的中共地下党员被日军抓获,他招供了,但招供的内容让三方势力都陷入了恐慌。</em>
+                        <span>悬疑 · 中国大陆 · 2028</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="白日梦冒险王" data-search="白日梦冒险王 中国台湾 电影 奇幻/冒险/剧情 想象成真 自我救赎 公路 治愈" data-category="action" data-type-group="series" data-year-group="2020s" data-year="2025">
+                <a href="./movie-574.html">
+                    <span class="ranking-index">79</span>
+                    <img src="./124.jpg" alt="白日梦冒险王" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>白日梦冒险王</strong>
+                        <em>一个不敢辞职的文案策划,发现自己脑中的白日梦可以改写现实。</em>
+                        <span>动作 · 中国台湾 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="簷前滴水不差" data-search="簷前滴水不差 中国香港 电影 剧情/家庭 因果报应 家族往事 港味市井 黑色幽默" data-category="romance" data-type-group="series" data-year-group="2020s" data-year="2025">
+                <a href="./movie-844.html">
+                    <span class="ranking-index">80</span>
+                    <img src="./94.jpg" alt="簷前滴水不差" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>簷前滴水不差</strong>
+                        <em>一栋即将拆迁的唐楼里,七个住户因为一句“簷前滴水不差”的古老箴言,牵扯出跨越三十年的恩怨情仇。</em>
+                        <span>爱情 · 中国香港 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="巅峰拍档第一季" data-search="巅峰拍档第一季 英国 综艺 真人秀,汽车 赛车 挑战 毒舌 公路旅行 爆改" data-category="variety" data-type-group="variety" data-year-group="2020s" data-year="2025">
+                <a href="./movie-566.html">
+                    <span class="ranking-index">81</span>
+                    <img src="./116.jpg" alt="巅峰拍档第一季" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>巅峰拍档第一季</strong>
+                        <em>三个风格迥异的中年大叔,每期用一堆废旧零件造车,完成不可能的任务,顺便把彼此损得体无完肤。</em>
+                        <span>综艺 · 英国 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="一切皆允" data-search="一切皆允 美国 电影 动作/冒险 刺客 信条 兄弟会 改编" data-category="action" data-type-group="movie" data-year-group="2020s" data-year="2024">
+                <a href="./movie-1198.html">
+                    <span class="ranking-index">82</span>
+                    <img src="./148.jpg" alt="一切皆允" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>一切皆允</strong>
+                        <em>一名现代刺客穿越到十字军东征时期,发现刺客兄弟会的起源秘密。</em>
+                        <span>动作 · 美国 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="其后" data-search="其后 中国台湾 电影 剧情,爱情 文艺 遗憾 留白" data-category="asia" data-type-group="series" data-year-group="2020s" data-year="2026">
+                <a href="./movie-1544.html">
+                    <span class="ranking-index">83</span>
+                    <img src="./44.jpg" alt="其后" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>其后</strong>
+                        <em>三十年前他因懦弱错过了她,如今收到她葬礼的消息,他却发现自己连悲伤的资格都没有。</em>
+                        <span>亚洲 · 中国台湾 · 2026</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="真实2014" data-search="真实2014 法国/比利时 电影 悬疑,科幻,剧情 纪录片风格 记忆删除 社会实验 存在主义 伪记录" data-category="variety" data-type-group="documentary" data-year-group="2020s" data-year="2024">
+                <a href="./movie-39.html">
+                    <span class="ranking-index">84</span>
+                    <img src="./39.jpg" alt="真实2014" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>真实2014</strong>
+                        <em>2014年,一个纪录片团队跟踪拍摄了一项“删除不愉快记忆”的临床试验,但所有受试者后来都声称:“删除的不是我的记忆。</em>
+                        <span>综艺 · 法国/比利时 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="指环王:王者归来" data-search="指环王:王者归来 新西兰/美国 电影 奇幻/冒险 史诗 终极决战 黑暗塔 毁戒之路 希望" data-category="fantasy" data-type-group="movie" data-year-group="2020s" data-year="2026">
+                <a href="./movie-946.html">
+                    <span class="ranking-index">85</span>
+                    <img src="./46.jpg" alt="指环王:王者归来" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>指环王:王者归来</strong>
+                        <em>当魔戒掉入熔岩的最后一秒,索伦用最后的意识将阿拉贡拖入了幻境:一个从未有过魔戒的中土世界。</em>
+                        <span>奇幻 · 新西兰/美国 · 2026</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="扯淡地球史" data-search="扯淡地球史 英国 剧集 喜剧/伪纪录片 荒诞 戏说 历史解构 黑色幽默" data-category="variety" data-type-group="documentary" data-year-group="2020s" data-year="2024">
+                <a href="./movie-1683.html">
+                    <span class="ranking-index">86</span>
+                    <img src="./33.jpg" alt="扯淡地球史" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>扯淡地球史</strong>
+                        <em>一个不学无术的摄制组穿越时空,试图用弹幕和段子改写人类文明进程。</em>
+                        <span>综艺 · 英国 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="预知死亡" data-search="预知死亡 韩国 电影 悬疑,惊悚,奇幻 超能力 死神 反转 烧脑" data-category="fantasy" data-type-group="movie" data-year-group="2020s" data-year="2026">
+                <a href="./movie-802.html">
+                    <span class="ranking-index">87</span>
+                    <img src="./52.jpg" alt="预知死亡" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>预知死亡</strong>
+                        <em>一个能看到别人死亡瞬间的男人,在一次自杀干预中发现,眼前的跳楼者正是25年后杀死自己的真凶。</em>
+                        <span>奇幻 · 韩国 · 2026</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="阿拉卡达的秘密" data-search="阿拉卡达的秘密 美国 电视剧 悬疑,奇幻 克苏鲁 小镇 调查 古神" data-category="series" data-type-group="series" data-year-group="2020s" data-year="2023">
+                <a href="./movie-1025.html">
+                    <span class="ranking-index">88</span>
+                    <img src="./125.jpg" alt="阿拉卡达的秘密" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>阿拉卡达的秘密</strong>
+                        <em>一名FBI探员来到阿拉斯加的一个小镇调查失踪案,发现全镇居民都在供奉同一个来自冰层深处的古神。</em>
+                        <span>剧集 · 美国 · 2023</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="八角笼中" data-search="八角笼中 中国 电影 体育传记 MMA 格斗孤儿 真实事件改编" data-category="history" data-type-group="movie" data-year-group="2020s" data-year="2023">
+                <a href="./movie-1995.html">
+                    <span class="ranking-index">89</span>
+                    <img src="./45.jpg" alt="八角笼中" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>八角笼中</strong>
+                        <em>一个曾经的格斗冠军在四川大凉山带着一群无家可归的孩子用铁笼格斗闯出大山,却被舆论打成了“现代奴隶主”。</em>
+                        <span>古装 · 中国 · 2023</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="危情直播" data-search="危情直播 中国大陆 电影 犯罪、悬疑 直播 绑架 反转 限时营救" data-category="suspense" data-type-group="movie" data-year-group="2020s" data-year="2024">
+                <a href="./movie-262.html">
+                    <span class="ranking-index">90</span>
+                    <img src="./112.jpg" alt="危情直播" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>危情直播</strong>
+                        <em>一名网红主播在废弃医院直播探灵时,意外录下了真正的绑架案,凶手却在弹幕里指挥她完成“任务”。</em>
+                        <span>悬疑 · 中国大陆 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="忧郁的申石基" data-search="忧郁的申石基 韩国 剧集 喜剧,悬疑 人格分裂 重案组 搞笑 破案" data-category="series" data-type-group="series" data-year-group="2020s" data-year="2024">
+                <a href="./movie-1599.html">
+                    <span class="ranking-index">91</span>
+                    <img src="./99.jpg" alt="忧郁的申石基" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>忧郁的申石基</strong>
+                        <em>重案组刑警申石基在抓捕连环杀手时意外触发第二人格,一个丧到极致的诗人,反而破了奇案。</em>
+                        <span>剧集 · 韩国 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="含冤莫白酒醒时" data-search="含冤莫白酒醒时 中国大陆 电影 悬疑,犯罪,剧情 失忆 冤案 复仇 底层 社会" data-category="movie" data-type-group="series" data-year-group="2020s" data-year="2023">
+                <a href="./movie-705.html">
+                    <span class="ranking-index">92</span>
+                    <img src="./105.jpg" alt="含冤莫白酒醒时" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>含冤莫白酒醒时</strong>
+                        <em>一个被冤枉杀人的酒鬼,每次醉酒后会短暂恢复一小段记忆碎片,他必须在清醒与宿醉之间拼凑出真凶。</em>
+                        <span>电影 · 中国大陆 · 2023</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="鲁邦三世 不死身的血族" data-search="鲁邦三世 不死身的血族 日本 动画电影 动作,犯罪,冒险 怪盗 吸血鬼传说 不死之谜 峰不二子" data-category="animation" data-type-group="animation" data-year-group="2020s" data-year="2026">
+                <a href="./movie-975.html">
+                    <span class="ranking-index">93</span>
+                    <img src="./75.jpg" alt="鲁邦三世 不死身的血族" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>鲁邦三世 不死身的血族</strong>
+                        <em>传说中不死的血族后裔,盯上了鲁邦三世那颗不会停止跳动的心脏。</em>
+                        <span>动画 · 日本 · 2026</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="欧洲特快车" data-search="欧洲特快车 丹麦,德国 电影 剧情,历史 铁路 难民危机 公路片变体 欧洲现状" data-category="history" data-type-group="series" data-year-group="2020s" data-year="2025">
+                <a href="./movie-1869.html">
+                    <span class="ranking-index">94</span>
+                    <img src="./69.jpg" alt="欧洲特快车" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>欧洲特快车</strong>
+                        <em>一列从伊斯坦布尔开往巴黎的特快列车上,不同国籍、阶级和信仰的乘客被迫共同面对一场突发的政治暗杀。</em>
+                        <span>古装 · 丹麦,德国 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="素人特工" data-search="素人特工 美国 剧集 动作、喜剧 普通人 间谍 职场 搞笑 身份错位" data-category="comedy" data-type-group="series" data-year-group="2020s" data-year="2025">
+                <a href="./movie-1793.html">
+                    <span class="ranking-index">95</span>
+                    <img src="./143.jpg" alt="素人特工" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>素人特工</strong>
+                        <em>一个被裁员的HR经理被中情局误招,用辞退话术瓦解恐怖组织。</em>
+                        <span>喜剧 · 美国 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="丘比特的遗愿" data-search="丘比特的遗愿 泰国 剧集 爱情/奇幻 同性 许愿 神灵 甜虐 宿命" data-category="fantasy" data-type-group="series" data-year-group="2020s" data-year="2024">
+                <a href="./movie-899.html">
+                    <span class="ranking-index">96</span>
+                    <img src="./149.jpg" alt="丘比特的遗愿" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>丘比特的遗愿</strong>
+                        <em>分手那天,他们同时向爱神许愿,结果灵魂互换了。</em>
+                        <span>奇幻 · 泰国 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="恶夜活尸" data-search="恶夜活尸 韩国 电影 恐怖/动作 丧尸 公寓楼 密室求生 亲情 夜间限时" data-category="action" data-type-group="movie" data-year-group="2020s" data-year="2023">
+                <a href="./movie-878.html">
+                    <span class="ranking-index">97</span>
+                    <img src="./128.jpg" alt="恶夜活尸" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>恶夜活尸</strong>
+                        <em>一种只在夜间活化的丧尸病毒在首尔一栋公寓爆发,幸存者们必须在每个日出前活下来,但白天才是怪物真正进化的时刻。</em>
+                        <span>动作 · 韩国 · 2023</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="垃圾年代" data-search="垃圾年代 法国 电影 剧情,喜剧 拾荒者 温情 社会底层 诗意的现实主义 友谊" data-category="comedy" data-type-group="series" data-year-group="2020s" data-year="2025">
+                <a href="./movie-267.html">
+                    <span class="ranking-index">98</span>
+                    <img src="./117.jpg" alt="垃圾年代" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>垃圾年代</strong>
+                        <em>在巴黎郊区的垃圾场,一群被社会抛弃的拾荒者,用废弃的垃圾拼凑出了一个温暖的时代。</em>
+                        <span>喜剧 · 法国 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="师奶绮梦流口水" data-search="师奶绮梦流口水 中国香港 电影 喜剧,奇幻 师奶 男团 穿越 追星" data-category="comedy" data-type-group="series" data-year-group="2020s" data-year="2023">
+                <a href="./movie-498.html">
+                    <span class="ranking-index">99</span>
+                    <img src="./48.jpg" alt="师奶绮梦流口水" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>师奶绮梦流口水</strong>
+                        <em>三个中年主妇吃到一块神奇巧克力,穿越成了当红男团的贴身经纪人。</em>
+                        <span>喜剧 · 中国香港 · 2023</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="所有的猫都是灰色" data-search="所有的猫都是灰色 法国 电影 剧情,爱情,悬疑 黑白摄影 记忆与谎言 猫" data-category="romance" data-type-group="series" data-year-group="2020s" data-year="2025">
+                <a href="./movie-1662.html">
+                    <span class="ranking-index">100</span>
+                    <img src="./12.jpg" alt="所有的猫都是灰色" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>所有的猫都是灰色</strong>
+                        <em>一名失忆男人醒来后,有三个女人都声称是他的妻子,而他唯一的线索是一句“所有的猫都是灰色”。</em>
+                        <span>爱情 · 法国 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="棋子" data-search="棋子 中国大陆 电影 悬疑,犯罪,心理 象棋 连环杀手 高智商犯罪 猫鼠游戏 反转" data-category="suspense" data-type-group="movie" data-year-group="2020s" data-year="2021">
+                <a href="./movie-1059.html">
+                    <span class="ranking-index">101</span>
+                    <img src="./9.jpg" alt="棋子" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>棋子</strong>
+                        <em>一位刑警队长追查“象棋杀人案”,却发现每一具尸体的摆放位置,都在复刻自己四十年前的一盘残局。</em>
+                        <span>悬疑 · 中国大陆 · 2021</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="暗夜獠牙" data-search="暗夜獠牙 美国 电影 恐怖/吸血鬼 变异 公路 血腥 逃亡" data-category="suspense" data-type-group="movie" data-year-group="2020s" data-year="2023">
+                <a href="./movie-713.html">
+                    <span class="ranking-index">102</span>
+                    <img src="./113.jpg" alt="暗夜獠牙" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>暗夜獠牙</strong>
+                        <em>一辆驶向末路的夜间大巴上,一种让獠牙变异的病毒正在乘客之间悄然传播。</em>
+                        <span>悬疑 · 美国 · 2023</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="大滚友" data-search="大滚友 中国香港 电视剧 喜剧/都市/友情 废柴 兄弟情 黑色幽默" data-category="comedy" data-type-group="series" data-year-group="2020s" data-year="2025">
+                <a href="./movie-207.html">
+                    <span class="ranking-index">103</span>
+                    <img src="./57.jpg" alt="大滚友" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>大滚友</strong>
+                        <em>四个自称“滚友”的中年废柴,决定在破产前用仅剩的钱开一家只招待老年人的“不正经”酒吧。</em>
+                        <span>喜剧 · 中国香港 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="玩坏男孩" data-search="玩坏男孩 中国香港 电影 喜剧/爱情 渣男 反套路 搞笑 都市 女性" data-category="comedy" data-type-group="series" data-year-group="2020s" data-year="2024">
+                <a href="./movie-448.html">
+                    <span class="ranking-index">104</span>
+                    <img src="./148.jpg" alt="玩坏男孩" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>玩坏男孩</strong>
+                        <em>三个被同一个渣男骗过的女孩联手设局,要把他的“完美人设”当众拆穿。</em>
+                        <span>喜剧 · 中国香港 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="勾魂女郎" data-search="勾魂女郎 美国 电影 恐怖/奇幻 电话热线 许愿陷阱 都市传说 等价交换 女巫" data-category="romance" data-type-group="movie" data-year-group="2020s" data-year="2025">
+                <a href="./movie-309.html">
+                    <span class="ranking-index">105</span>
+                    <img src="./9.jpg" alt="勾魂女郎" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>勾魂女郎</strong>
+                        <em>凌晨三点拨通那个号码,她会帮你解决任何人,但代价是你消失在被解决者的记忆里。</em>
+                        <span>爱情 · 美国 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="鬼吹灯之巫峡棺山" data-search="鬼吹灯之巫峡棺山 中国大陆 剧集 悬疑,冒险,奇幻 盗墓 鬼吹灯 摸金校尉 棺山 地仙" data-category="series" data-type-group="series" data-year-group="2020s" data-year="2023">
+                <a href="./movie-1481.html">
+                    <span class="ranking-index">106</span>
+                    <img src="./131.jpg" alt="鬼吹灯之巫峡棺山" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>鬼吹灯之巫峡棺山</strong>
+                        <em>胡八一等人深入巫峡棺材山,寻找“地仙村”,却发现那里葬着明朝的“尸仙”。</em>
+                        <span>剧集 · 中国大陆 · 2023</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="夏湾拿艳舞" data-search="夏湾拿艳舞 古巴,西班牙 电影 剧情,歌舞,历史 古巴革命 夜总会 母女 记忆 红色高跟鞋" data-category="history" data-type-group="series" data-year-group="2020s" data-year="2021">
+                <a href="./movie-304.html">
+                    <span class="ranking-index">107</span>
+                    <img src="./4.jpg" alt="夏湾拿艳舞" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>夏湾拿艳舞</strong>
+                        <em>1958年哈瓦那最后一晚,一个华裔舞女在革命枪声与探戈鼓点中寻找失踪的母亲。</em>
+                        <span>古装 · 古巴,西班牙 · 2021</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="纽约五尖塔" data-search="纽约五尖塔 美国 电影 犯罪,剧情,动作 黑帮 复仇 地标 兄弟情 背叛" data-category="global" data-type-group="series" data-year-group="2020s" data-year="2024">
+                <a href="./movie-490.html">
+                    <span class="ranking-index">108</span>
+                    <img src="./40.jpg" alt="纽约五尖塔" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>纽约五尖塔</strong>
+                        <em>五座地标下埋着五具尸体,一个出狱的杀手必须在24小时内找到最后一具。</em>
+                        <span>欧美 · 美国 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="寻狗启事" data-search="寻狗启事 中国大陆 电影 剧情/黑色幽默 小成本 荒诞 城市孤独 巧合" data-category="comedy" data-type-group="series" data-year-group="2020s" data-year="2023">
+                <a href="./movie-186.html">
+                    <span class="ranking-index">109</span>
+                    <img src="./36.jpg" alt="寻狗启事" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>寻狗启事</strong>
+                        <em>一张悬赏 10 万的寻狗启事被贴出后,全城开始疯狂抓捕流浪狗,却没人知道狗就在启事旁边。</em>
+                        <span>喜剧 · 中国大陆 · 2023</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="另一个梦之队" data-search="另一个梦之队 中国大陆 电影 剧情,运动 篮球 热血 逆袭" data-category="action" data-type-group="series" data-year-group="2020s" data-year="2026">
+                <a href="./movie-1426.html">
+                    <span class="ranking-index">110</span>
+                    <img src="./76.jpg" alt="另一个梦之队" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>另一个梦之队</strong>
+                        <em>一群被校队淘汰的“废柴”学生,为了保住社团教室,被迫组建一支前所未有的篮球队。</em>
+                        <span>动作 · 中国大陆 · 2026</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="无间道第一季" data-search="无间道第一季 中国香港 剧集 警匪,悬疑 卧底 前传 经典重启 心理博弈" data-category="series" data-type-group="series" data-year-group="2020s" data-year="2026">
+                <a href="./movie-1806.html">
+                    <span class="ranking-index">111</span>
+                    <img src="./6.jpg" alt="无间道第一季" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>无间道第一季</strong>
+                        <em>在电影故事的五年前,年轻的刘建明和陈永仁,是如何被各自的上司选中,踏入那条不归路的。</em>
+                        <span>剧集 · 中国香港 · 2026</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="魔兽战线" data-search="魔兽战线 美国 剧集 科幻、战争、动作 怪兽 机甲 末世 硬核" data-category="series" data-type-group="series" data-year-group="2020s" data-year="2025">
+                <a href="./movie-5.html">
+                    <span class="ranking-index">112</span>
+                    <img src="./5.jpg" alt="魔兽战线" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>魔兽战线</strong>
+                        <em>2049年,虫洞开启魔兽入侵,人类最后一座要塞里,步兵与机甲兵每天都在上演生死抉择。</em>
+                        <span>剧集 · 美国 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="游手好闲" data-search="游手好闲 中国大陆 电影 喜剧/剧情 躺平 小镇青年 荒诞 黑色幽默 人生选择" data-category="comedy" data-type-group="series" data-year-group="2020s" data-year="2025">
+                <a href="./movie-697.html">
+                    <span class="ranking-index">113</span>
+                    <img src="./97.jpg" alt="游手好闲" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>游手好闲</strong>
+                        <em>三个小镇无业青年决定“专业躺平”,却意外卷入一场荒诞的致富计划。</em>
+                        <span>喜剧 · 中国大陆 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="全美缉凶:本·拉登" data-search="全美缉凶:本·拉登 美国 剧集 悬疑/犯罪/纪实 反恐 追捕 CIA 纪实风格 政治" data-category="variety" data-type-group="series" data-year-group="2020s" data-year="2022">
+                <a href="./movie-768.html">
+                    <span class="ranking-index">114</span>
+                    <img src="./18.jpg" alt="全美缉凶:本·拉登" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>全美缉凶:本·拉登</strong>
+                        <em>横跨二十年的追捕,从FBI探员到CIA特工,揭秘猎杀本·拉登背后不为人知的谍战故事。</em>
+                        <span>综艺 · 美国 · 2022</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="锦绣重生:早安傅太太" data-search="锦绣重生:早安傅太太 中国大陆 电视剧 爱情,复仇,现代 重生 逆袭 霸总 手撕渣男" data-category="series" data-type-group="series" data-year-group="2020s" data-year="2024">
+                <a href="./movie-983.html">
+                    <span class="ranking-index">115</span>
+                    <img src="./83.jpg" alt="锦绣重生:早安傅太太" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>锦绣重生:早安傅太太</strong>
+                        <em>前世被闺蜜和丈夫联手害死的千金,重生归来,发誓要嫁给仇人的死对头,搅乱整个商界。</em>
+                        <span>剧集 · 中国大陆 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="帅哥不可以" data-search="帅哥不可以 中国大陆 剧集 喜剧,爱情,奇幻 女尊世界 反套路 轻喜" data-category="comedy" data-type-group="series" data-year-group="2020s" data-year="2023">
+                <a href="./movie-1919.html">
+                    <span class="ranking-index">116</span>
+                    <img src="./119.jpg" alt="帅哥不可以" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>帅哥不可以</strong>
+                        <em>霸道女总裁穿越进玛丽苏小说,却成了要被男主虐待的炮灰女配,她决定按商业逻辑解构所有虐恋剧情。</em>
+                        <span>喜剧 · 中国大陆 · 2023</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="无冕皇后" data-search="无冕皇后 中国大陆 剧集 古装/宫斗/女性 后宫 逆袭 侍女上位 权谋 智商在线" data-category="history" data-type-group="series" data-year-group="2020s" data-year="2024">
+                <a href="./movie-254.html">
+                    <span class="ranking-index">117</span>
+                    <img src="./104.jpg" alt="无冕皇后" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>无冕皇后</strong>
+                        <em>一个被人当作棋子的浣衣局宫女,用十五年的时间把后宫所有人变成棋子,最终拒绝后位,成为真正的“无冕皇后”。</em>
+                        <span>古装 · 中国大陆 · 2024</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="急速逃脱" data-search="急速逃脱 德国 电影 动作,悬疑,犯罪,惊悚 飙车 电话威胁 计时器 父女情 反转" data-category="suspense" data-type-group="movie" data-year-group="2020s" data-year="2020">
+                <a href="./movie-831.html">
+                    <span class="ranking-index">118</span>
+                    <img src="./81.jpg" alt="急速逃脱" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>急速逃脱</strong>
+                        <em>银行经理带女儿上班途中接到电话:车内被装了炸弹,不按指令转账就引爆。</em>
+                        <span>悬疑 · 德国 · 2020</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="蜜之哀伤" data-search="蜜之哀伤 日本 电影 剧情/奇幻 蜂蜜 丧子 幻觉 治愈 乡村" data-category="fantasy" data-type-group="series" data-year-group="2020s" data-year="2025">
+                <a href="./movie-212.html">
+                    <span class="ranking-index">119</span>
+                    <img src="./62.jpg" alt="蜜之哀伤" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>蜜之哀伤</strong>
+                        <em>养蜂人丧子后,每一批蜂蜜都会让食用者看到已故儿子的幻影。</em>
+                        <span>奇幻 · 日本 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            <li class="ranking-row" data-movie-card data-title="巴德美因霍夫" data-search="巴德美因霍夫 德国 剧集 犯罪,惊悚,历史 真实事件改编 恐怖组织 暗黑年代 心理博弈" data-category="series" data-type-group="series" data-year-group="2020s" data-year="2025">
+                <a href="./movie-1675.html">
+                    <span class="ranking-index">120</span>
+                    <img src="./25.jpg" alt="巴德美因霍夫" loading="lazy">
+                    <span class="ranking-info">
+                        <strong>巴德美因霍夫</strong>
+                        <em>1970年代德国极左恐怖组织“巴德美因霍夫”内部,一名卧底特工在信仰与任务之间逐渐迷失自我。</em>
+                        <span>剧集 · 德国 · 2025</span>
+                    </span>
+                    <span class="ranking-play">▶</span>
+                </a>
+            </li>
+            </ol>
+        </section>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-grid">
+        <div>
+            <a class="footer-logo" href="./index.html"><span class="logo-mark">影</span><span>影视在线</span></a>
+            <p>高清电影、电视剧、综艺节目在线观看平台，精选海量影视内容，提供流畅观影体验。</p>
+        </div>
+        <div class="footer-links">
+            <a href="./index.html">首页</a>
+            <a href="./categories.html">分类</a>
+            <a href="./ranking.html">排行榜</a>
+            <a href="./search.html">搜索</a>
+            <a href="./category-movie.html">电影</a>
+            <a href="./category-series.html">剧集</a>
+            <a href="./category-action.html">动作</a>
+            <a href="./category-romance.html">爱情</a>
+            <a href="./category-comedy.html">喜剧</a>
+            <a href="./category-suspense.html">悬疑</a>
+            <a href="./category-animation.html">动画</a>
+            <a href="./category-fantasy.html">奇幻</a>
+        </div>
+    </div>
+    <div class="footer-bottom">© 2026 影视在线 · 高清影视在线观看</div>
+</footer>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?95df08bc498ee0333203841fd6fee1eb";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>
